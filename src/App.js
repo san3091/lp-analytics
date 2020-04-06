@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import RegistrantsChart from "./RegistrantsChart"
+import './App.css'
 
-function App() {
+/*
+ * TODO
+ * - total registrants
+ * - unique registrants
+ * - UChicago
+ * - per class? 
+ * ...ugh I need a database
+ */
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="ChartOptions">
+        <h2 className="OptionsTitle">Chart Options</h2>
+      </section>
+      <section className="Chart">
+        <h1 className="ChartTitle">All Registrations</h1>
+        <RegistrantsChart />
+      </section>
     </div>
   );
 }
